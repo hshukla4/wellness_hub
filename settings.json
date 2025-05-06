@@ -1,10 +1,12 @@
 {
-    "python.pythonPath": "venv/bin/python",
+
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": false,
     "editor.formatOnSave": true,
+    "python.pythonPath": "smart_job_ai/bin/python",
+    "codegpt.openaiApiKey": "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",
     "files.exclude": {
         "**/__pycache__": true,
         "**/*.pyc": true
