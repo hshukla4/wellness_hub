@@ -24,6 +24,14 @@ lib/
 dist/
 build/
 
+# Ignore installed libraries and site-packages
+lib/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.dylib
+
 # Large or compiled objects
 *.dylib
 *.so
