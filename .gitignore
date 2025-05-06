@@ -54,3 +54,4 @@ __pycache__/
 # Don't ignore your project data directories
 !.docs/
 !.data/
+.DS_Store
