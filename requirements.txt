@@ -3,3 +3,6 @@ sentence-transformers
 pandas
 openai
 argparse
+PyMuPDF>=1.21
+python-docx
+python-docx
