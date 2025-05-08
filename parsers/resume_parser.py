@@ -4,6 +4,7 @@
 # It also uses the spaCy library for natural language processing to identify named entities and noun chunks.
 # It includes functions to extract skills, education, certifications, projects, languages, experience, publications, and references from the resume text.
 # Import necessary libraries
+import json
 import logging
 import os
 import re
@@ -31,6 +32,8 @@ warnings.simplefilter("ignore", NotOpenSSLWarning)
 warnings.simplefilter("ignore", InsecureRequestWarning)
 # Add the parent directory to the system path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+
 # from parsers.job_parser import load_jobs
 # from parsers.resume_parser import parse_resume
 # Load English model
@@ -104,7 +107,6 @@ def parse_resume(filename):
     publications_found = []
     references_found = []
     # Extract text from the resume file
-    import json
 
     # Check if the file is a PDF or DOCX
     try:
