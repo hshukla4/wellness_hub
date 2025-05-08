@@ -105,21 +105,21 @@ def _extract_skills(cleaned_text):
     
     return skills
 
-def _extract_experience(cleaned_text):
-    found_skills = [kw for kw in skill_keywords if kw.lower() in cleaned_text.lower()]
-    return found_skills
-
 def _extract_education(cleaned_text):
+    extract_education = []
     extract_education = [kw for kw in education_keywords if kw.lower() in cleaned_text.lower()]
     
     return extract_education
 
 def _extract_certifications(cleaned_text):
-    extract_certifications = [kw for kw in certificates_keywords if kw.lower() in cleaned_text.lower()]
+    extract_certification = []
+    extract_certification = [kw for kw in certificates_keywords if kw.lower() in cleaned_text.lower()]
     
-    return extract_certifications
+    return extract_certification
 
 def _extract_projects(cleaned_text):
+    extract_projects = []
+    
     for proj in cleaned_text.split('\n'):
         if re.search(r'\b(project|project name|project title)\b', proj, re.IGNORECASE):
             extract_projects+=proj;
@@ -127,12 +127,16 @@ def _extract_projects(cleaned_text):
     return extract_projects
 
 def _extract_languages(cleaned_text):
+    extract_languages = []
+    
     extract_languages = [kw for kw in languages_keywords if kw.lower() in cleaned_text.lower()]
     
     return extract_languages
 
 
-def _extract_publications(cleaned_text):    
+def _extract_publications(cleaned_text): 
+    extract_publications = []
+    
     for pub in cleaned_text.split('\n'):
         if re.search(r'\b(publication|paper|article)\b', pub, re.IGNORECASE):
             extract_publications+=pub;
@@ -140,6 +144,8 @@ def _extract_publications(cleaned_text):
     return extract_publications
 
 def _extract_experience(cleaned_text):
+    extract_experience = []
+    
     for exp in cleaned_text.split('\n'):
         if re.search(r'\b(experience|work experience|job title)\b', exp, re.IGNORECASE):
             extract_experience+=exp;
@@ -147,6 +153,8 @@ def _extract_experience(cleaned_text):
     return extract_experience
 
 def _extract_references(cleaned_text):
+    extract_references = []
+    
     for ref in cleaned_text.split('\n'):
         if re.search(r'\b(reference|referee)\b', ref, re.IGNORECASE):
             extract_references+=ref;
