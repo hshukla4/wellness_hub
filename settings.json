@@ -6,6 +6,15 @@
     "python.linting.flake8Enabled": false,
     "editor.formatOnSave": true,
     "codegpt.openaiApiKey": "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",
+    
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.sortImports.args": ["--profile", "black"],
+
 
     "python.pythonPath": "venv/bin/python",
     "python.terminal.activateEnvironment": true,

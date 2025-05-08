@@ -2,23 +2,19 @@
 # test_run.py
 
 
-#from parsers.resume_parser import parse_resume
-#from parsers.job_parser import load_jobs
+# from parsers.resume_parser import parse_resume
+# from parsers.job_parser import load_jobs
 
 
-import sys
 import os
+import sys
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 FILE_NAME = ".docs/sample_resume.pdf"
 from parsers.resume_parser import parse_resume
 
-
 resume_text = parse_resume(FILE_NAME)
 
 print("Extracted Resume Text:", resume_text)
-#print("Loaded Jobs:", jobs)
-
-
-
-
+# print("Loaded Jobs:", jobs)
