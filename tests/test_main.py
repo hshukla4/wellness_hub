@@ -11,10 +11,7 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-FILE_NAME = ".docs/sample_resume.pdf"
+FILE_NAME = ".docs/sample_resume_generated.pdf"
 from parsers.resume_parser import parse_resume
 
 resume_text = parse_resume(FILE_NAME)
-
-print("Extracted Resume Text:", resume_text)
-# print("Loaded Jobs:", jobs)

@@ -3,6 +3,10 @@ annotated-types==0.7.0
 anyio==4.9.0
 astroid==3.3.9
 black==25.1.0
+<<<<<<< HEAD
+=======
+blinker==1.9.0
+>>>>>>> feature/resume_parser
 blis==1.3.0
 catalogue==2.0.10
 certifi==2025.4.26
@@ -19,11 +23,19 @@ cymem==2.0.11
 dill==0.4.0
 distlib==0.3.9
 distro==1.9.0
+<<<<<<< HEAD
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+=======
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl#sha256=1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85
+>>>>>>> feature/resume_parser
 etelemetry==0.3.1
 exceptiongroup==1.2.2
 filelock==3.18.0
 flake8==7.2.0
+<<<<<<< HEAD
+=======
+Flask==3.1.0
+>>>>>>> feature/resume_parser
 fsspec==2025.3.2
 h11==0.16.0
 httpcore==1.0.9
@@ -36,6 +48,10 @@ importlib_resources==6.5.2
 iniconfig==2.1.0
 isodate==0.6.1
 isort==6.0.1
+<<<<<<< HEAD
+=======
+itsdangerous==2.2.0
+>>>>>>> feature/resume_parser
 Jinja2==3.1.6
 jiter==0.9.0
 joblib==1.5.0
@@ -97,7 +113,11 @@ shellingham==1.5.4
 simplejson==3.20.1
 six==1.17.0
 smart-open==7.1.0
+<<<<<<< HEAD
 -e git+https://github.com/hshukla4/smart-job-match-ai.git@c4d3c80647d94b06f7ccaf884433f2be1ce747b5#egg=smart_job_ai
+=======
+-e git+https://github.com/hshukla4/smart-job-match-ai.git@bbce9f0f2ab53909ac7e15b2b792fb2c426d1d35#egg=smart_job_ai
+>>>>>>> feature/resume_parser
 sniffio==1.3.1
 spacy==3.8.5
 spacy-legacy==3.0.12
@@ -121,5 +141,9 @@ urllib3==2.4.0
 virtualenv==20.31.1
 wasabi==1.1.3
 weasel==0.4.1
+<<<<<<< HEAD
+=======
+Werkzeug==3.1.3
+>>>>>>> feature/resume_parser
 wrapt==1.17.2
 zipp==3.21.0
