@@ -73,3 +73,12 @@ def extract_text_from_file(filename):
         logging.error(f"Error extracting text from {filename}: {e}")
         raise e
     return text
+
+
+def extract_section(cleaned_text, section_names, stop_words):
+    for name in section_names:
+        pattern = rf"{name}[\s:]*\n([\s\S]+?)(?=\n(?:{'|'.join(stop_words)})[\s:]|\Z)"
+        match = re.search(pattern, cleaned_text, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+    return ""
