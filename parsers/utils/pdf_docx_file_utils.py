@@ -59,10 +59,7 @@ def extract_text_from_file(filename):
             doc = Document(filename)
             for para in doc.paragraphs:
                 text += para.text + NEW_LINE
-        else:
-            print(f"File {filename} is not a PDF or DOCX file.")
-            return None
-        # Clean the text by removing extra spaces and newlines
+            doc.close()  # Clean the text by removing extra spaces and newlines
         text = re.sub(r"\s+", " ", text)  # Replace multiple spaces with a single space
         text = re.sub(
             r"\n+", NEW_LINE, text
