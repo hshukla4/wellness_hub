@@ -14,7 +14,6 @@ import warnings
 import spacy  # type: ignore
 
 # Suppress NotOpenSSLWarning
-# Suppress NotOpenSSLWarning
 from urllib3.exceptions import InsecureRequestWarning  # type: ignore
 from urllib3.exceptions import NotOpenSSLWarning
 
@@ -110,11 +109,9 @@ def parse_resume(filename):
     # Extract text from the resume file
 
     # Check if the file is a PDF or DOCX
-    # try:
     # Extract information from the cleaned text
     # Extracted information
     cleaned_text = extract_text_from_file(filename)
-    # cleaned_text = normalize_headers(cleaned_text, SECTION_STOP_WORDS)
     returned_value = _parse_resume_text(
         cleaned_text, skill_keywords, languages_keywords, certificates_keywords
     )
@@ -133,7 +130,6 @@ def _normalize_headers(text, headers):
 def _extract_section(cleaned_text, section_names, stop_words):
     for name in section_names:
         # Final fix: match full line section headers only
-        # pattern = rf"(?:^|\n){name}\b[\s:]*([\s\S]+?)(?=\n(?:{'|'.join(stop_words)})(?:\s|:|\n|\Z))"
         pattern = rf"(?:^|\n){name}[\s:]+([^\n]+)"
         match = re.search(pattern, cleaned_text, re.IGNORECASE)
         if match:
@@ -190,35 +186,6 @@ def _parse_resume_text(
     except Exception as e:
         logging.error(f"Resume parsing error: {e}")
         return {"error": str(e)}
-
-
-# def _extract_skills(cleaned_text):
-#     # nlp = spacy.load("en_core_web_sm")
-#     # doc = nlp(cleaned_text)
-#     # skills = []
-#     # for ent in doc.ents:
-#     #     skills += [ent.text for ent in doc.ents if ent.label_]
-
-#     skills = [kw for kw in skill_keywords if kw.lower() in cleaned_text.lower()]
-
-#     return skills
-
-
-# def _extract_certifications(cleaned_text):
-#     extract_certification = [
-#         kw for kw in certificates_keywords if kw.lower() in cleaned_text.lower()
-#     ]
-
-#     return extract_certification
-
-
-# def _extract_languages(cleaned_text):
-
-#     extract_languages = [
-#         kw for kw in languages_keywords if kw.lower() in cleaned_text.lower()
-#     ]
-
-#     return extract_languages
 
 
 def _extract_publications(cleaned_text):
