@@ -9,11 +9,13 @@ FILE_DOES_NOT_EXIST = ".docs/sample_resume_does_not_exist.pdf"
 INVALID_FILE_TYPE = ".docs/sample_resume_wrong.PNG"
 EMPTY_FILE = ".docs/empty_resume.pdf"
 
+
 from parsers.resume_parser import parse_resume
 from parsers.utils.pdf_docx_file_utils import extract_section
 
 
 def test_main():
+
     _parse_resume_pdf()
     _parse_resume_docx()
     _parse_resume_invalid_file_type()
