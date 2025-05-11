@@ -1,6 +1,11 @@
 import os
 import sys
 
+from parsers.resume_parser import parse_resume
+
+# from parsers.utils.pdf_docx_file_utils import extract_section
+from parsers.utils.pdf_docx_file_utils import extract_section
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 FILE_NAME_PDF = ".docs/sample_resume.pdf"
@@ -8,10 +13,6 @@ FILE_NAME_DOCX = ".docs/sample_resume.docx"
 FILE_DOES_NOT_EXIST = ".docs/sample_resume_does_not_exist.pdf"
 INVALID_FILE_TYPE = ".docs/sample_resume_wrong.PNG"
 EMPTY_FILE = ".docs/empty_resume.pdf"
-
-
-from parsers.resume_parser import parse_resume
-from parsers.utils.pdf_docx_file_utils import extract_section
 
 
 def test_main():
