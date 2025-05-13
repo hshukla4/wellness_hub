@@ -17,7 +17,7 @@ warnings.simplefilter("ignore", InsecureRequestWarning)
 # Add the parent directory to the system path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_lg")
 
 
 def parse_resume_workflow(file_path):
@@ -27,18 +27,24 @@ def parse_resume_workflow(file_path):
     resume_text = extract_text_from_file(file_path)
     doc = nlp(resume_text)
 
+    skills = ["Python", "SQL", "NLP", "Bash", "Docker", "Jupyter", "Matplotlib", "TF-IDF", "spaCy", "HuggingFace"]
+    matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
+    patterns = [nlp.make_doc(skill) for skill in skills]
+    matcher.add("SKILL", patterns)
     # Example: Extract Named Entities
     named_entities = [(ent.text, ent.label_) for ent in doc.ents]
+    for ent in named_entities:
+        print(f"Entity: {ent[0]}, Type: {ent[1]}")
 
-    # Match skills
-    skills = ["Python", "TensorFlow", "Docker", "REST APIs"]
-    matcher = PhraseMatcher(nlp.vocab)
-    patterns = [nlp.make_doc(skill) for skill in skills]
-    matcher.add("SKILLS", patterns)
 
     matched_skills = []
     matches = matcher(doc)
     for match_id, start, end in matches:
         matched_skills.append(doc[start:end].text)
-
-    return {"text": resume_text, "entities": named_entities, "skills": matched_skills}
+    # 
+    unique_skills = sorted(set([doc[start:end].text for match_id, start, end in matches]))
+    print("Matched skills:", unique_skills)
+    
+    print(f"Named entities: {named_entities}")
+    print(f"Resume text: {resume_text}")
+    return {"text": resume_text, "entities": named_entities, "skills": unique_skills}

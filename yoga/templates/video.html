@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wellness Hub - Guided Yoga & Bhajans</title>
+    <script>
+        function changeMedia() {
+            const videoTag = document.getElementById('videoPlayer');
+            const videoSource = document.getElementById('videoSource');
+            const videoFile = document.getElementById('videoSelect').value;
+
+            videoSource.src = videoFile;
+            videoTag.load();
+            videoTag.play();
+        }
+        
+        function changeYoga() {
+            const yogaPlayer = document.getElementById('yogaSource');
+            const yogaTag = document.getElementById('yogaPlayer');
+
+            yogaPlayer.src = document.getElementById('yogaSelect').value;
+            yogaTag.load();
+            yogaTag.play();
+        }
+
+        function changeBhajan() {
+            const bhajanPlayer = document.getElementById('bhajanSource');
+            const bhajanTag = document.getElementById('bhajanPlayer');
+
+            bhajanPlayer.src = document.getElementById('bhajanSelect').value;
+            bhajanTag.load();
+            bhajanTag.play();
+        }
+
+
+    </script>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("{{ url_for('static', filename='Orange-Background.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff0d0;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        #logo {
+            width: 300px;
+            margin: 30px auto;
+            display: block;
+        }
+</style>    
+</head>
+<body style="text-align:center;">
+
+    <img id="logo" src="{{ url_for('static', filename='welnesshub-lighter-back-logo.png') }}" alt="Wellness Hub Logo">
+
+    <h2>Wellness Hub – Guided Yoga</h2>
+
+    <label for="videoSelect"><strong>Select a Yoga Pose:</strong></label><br><br>
+    <select id="videoSelect" onchange="changeMedia()">
+        <option value="{{ url_for('static', filename='tadasana_video.mp4') }}">Tadasana (Mountain Pose)</option>
+        <option value="{{ url_for('static', filename='bhujangasana_video.mp4') }}">Bhujangasana (Cobra Pose)</option>
+        <option value="{{ url_for('static', filename='sun_salutation.mp4') }}">Surya Namaskar</option>
+    </select>
+
+    <br><br>
+
+    <video id="videoPlayer" width="90%" controls>
+        <source id="videoSource" src="{{ url_for('static', filename='tadasana_video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <br><br>
+
+
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Yoga Audio Corner 🎶</h2>
+
+    <label for="yogaSelect"><strong>Select a Yoga:</strong></label><br><br>
+    <select id="yogaSelect" onchange="changeYoga()">
+        <option value="{{ url_for('static', filename='Bhujangasana_Yoga_Guide.mp3') }}">Bhujangasana</option>
+        <option value="{{ url_for('static', filename='Tadasana_Yoga_Guide.mp3') }}">Tadasana</option>
+    </select>
+
+    <br><br>
+
+    <audio id="yogaPlayer" controls>
+        <source id="yogaSource" src="{{ url_for('static', filename='Bhujangasana_Yoga_Guide.mp3') }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Bhajan Corner 🎶</h2>
+
+    <label for="bhajanSelect"><strong>Select a Bhajan:</strong></label><br><br>
+    <select id="bhajanSelect" onchange="changeBhajan()">
+        <option value="{{ url_for('static', filename='om_namah_shivaya.mp3') }}">Shiv Bhajan</option>
+        <option value="{{ url_for('static', filename='Shiv_Stuti.mp3') }}">Shiv Stuti</option>
+        <option value="{{ url_for('static', filename='Krishna_Bhajan.mp3') }}">Krishna Bhajan</option>
+    </select>
+
+    <br><br>
+
+    <audio id="bhajanPlayer" controls>
+        <source id="bhajanSource" src="{{ url_for('static', filename='om_namah_shivaya.mp3') }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>

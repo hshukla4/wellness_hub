@@ -53,3 +53,4 @@ python main.py --skills-recommend
 
 # Generate GPT-based career guidance (optional)
 python main.py --career-advice
+# wellness_hub
