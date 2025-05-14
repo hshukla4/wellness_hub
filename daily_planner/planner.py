@@ -18,15 +18,19 @@ def _print_plan(plan, title="Wellness Hub – AI Daily Planner"):
         print(f"  🕒 {block['time']} → {block['activity']}")
     print()
 
-def run_dynamic_rules_main(health_data_json, rules_path="daily_planner/data/advanced_rules.json"):
+def run_dynamic_rules_main(health_data_input, rules_path="daily_planner/data/advanced_rules.json"):
     try:
-        health_data = json.loads(health_data_json)
+        if isinstance(health_data_input, str):
+                health_data = json.loads(health_data_input)
+        else:
+                health_data = health_data_input
     except json.JSONDecodeError:
         print("❌ Invalid JSON input.")
         sys.exit(1)
 
     plan = run_dynamic_rules(health_data, rules_path)
     _print_plan(plan)
+    return plan 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
