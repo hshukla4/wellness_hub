@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/himanshushukla/projects/smart_job_ai"
+VIRTUAL_ENV="/Users/himanshushukla/projects/wellness_hub"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,7 +54,7 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(smart_job_ai) ${PS1:-}"
+    PS1="(wellness_hub) ${PS1:-}"
     export PS1
 fi
 

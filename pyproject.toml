@@ -1,11 +1,21 @@
-[tool.black]
-line-length = 88
-target-version = ['py39']
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
-[tool.isort]
-profile = "black"
-line_length = 88
+[project]
+name = "wellness_hub"
+version = "0.1.0"
+description = "AI-powered daily planner and wellness assistant"
+authors = [{ name = "Himanshu Shukla", email = "hshukla4@yahoo.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "spacy",
+    "PyMuPDF>=1.21",
+    "torch",
+    "durable_rules",
+    "Flask",
+    "pandas"
+]
 
-[tool.flake8]
-max-line-length = 88
-extend-ignore = ["E203", "W503"]
+[project.scripts]
+wellness = "wellness_hub.main:main"

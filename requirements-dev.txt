@@ -1,0 +1,8 @@
+black
+flake8
+pytest
+pre-commit
+mypy
+coverage
+isort
+pylint

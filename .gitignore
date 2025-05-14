@@ -6,7 +6,7 @@ __pycache__/
 
 # Virtual environments
 venv/
-smart_job_ai/
+wellness_hub/
 .env/
 lib/
 

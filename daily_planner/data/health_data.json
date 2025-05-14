@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Low Sleep, High Stress",
+      "data": {
+        "sleep_hours": 5.5,
+        "stress_level": 8,
+        "steps": 3200,
+        "energy_level": 4,
+        "mood": "anxious",
+        "weather": "clear",
+        "digestive_issue": true
+      }
+    },
+    {
+      "name": "Good Sleep, Calm Mood",
+      "data": {
+        "sleep_hours": 7.5,
+        "stress_level": 3,
+        "steps": 8500,
+        "energy_level": 7,
+        "mood": "calm",
+        "weather": "rainy",
+        "digestive_issue": false
+      }
+    },
+    {
+      "name": "Fatigue with High Steps",
+      "data": {
+        "sleep_hours": 6.0,
+        "stress_level": 5,
+        "steps": 12000,
+        "energy_level": 3,
+        "mood": "tired",
+        "weather": "hot",
+        "digestive_issue": false
+      }
+    },
+    {
+      "name": "Restless and Digestive Discomfort",
+      "data": {
+        "sleep_hours": 4.5,
+        "stress_level": 9,
+        "steps": 2000,
+        "energy_level": 2,
+        "mood": "restless",
+        "weather": "humid",
+        "digestive_issue": true
+      }
+    }
+  ]
