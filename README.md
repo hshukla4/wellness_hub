@@ -39,17 +39,7 @@ smart_job_match_ai/
 
 ## 🛠️ Installation
 
-```bash
-git clone git@github.com:hshukla4/smart-job-match-ai.git
-cd smart-job-match-ai
-pip install -r requirements.txt
-
-
-# Run full analysis
-python main.py --resume ./docs/resume.pdf --jobs ./data/jobs.csv --output ./reports/
-
-# View missing skills & learning plan
-python main.py --skills-recommend
-
-# Generate GPT-based career guidance (optional)
-python main.py --career-advice
+open docs/setup_guide.md          # macOS
+xdg-open docs/setup_guide.md      # Linux
+notepad docs/setup_guide.md       # Windows
+code docs/setup_guide.md          # VS Code

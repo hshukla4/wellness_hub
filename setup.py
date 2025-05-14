@@ -1,9 +1,21 @@
-from setuptools import find_packages, setup  # type: ignore
+from setuptools import setup, find_packages
 
 setup(
-    name="smart_job_ai",
-    version="0.1",
+    name="wellness_hub",
+    version="0.1.0",
     packages=find_packages(),
-    install_requires=["spacy", "PyMuPDF>=1.21", "torch"],
-    entry_points={"console_scripts": ["smartjob = smart_job_ai.main:main"]},
+    install_requires=[
+        "spacy",
+        "PyMuPDF>=1.21",
+        "torch",
+        "durable_rules",
+        "Flask",
+        "pandas"
+    ],
+    entry_points={
+        "console_scripts": [
+            "wellness=wellness_hub.main:main"
+        ]
+    },
+    include_package_data=True,
 )

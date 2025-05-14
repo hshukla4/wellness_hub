@@ -29,7 +29,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # from parsers.job_parser import load_jobs
 # from parsers.resume_parser import parse_resume
 # Load English model
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_sm")
 
 # Sample resume text (for demonstration purposes)
 skill_keywords = [

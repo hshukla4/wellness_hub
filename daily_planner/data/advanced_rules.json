@@ -1,0 +1,177 @@
+[
+    {
+        "conditions": {
+            "all": [
+                {
+                    "field": "sleep_hours",
+                    "operator": "<",
+                    "value": 6
+                },
+                {
+                    "field": "stress_level",
+                    "operator": ">",
+                    "value": 7
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "7:30 AM",
+                "activity": "10 min breathwork to reduce anxiety",
+                "duration": 10,
+                "category": "mental"
+            },
+            {
+                "time": "8:00 AM",
+                "activity": "Warm herbal tea with ashwagandha",
+                "duration": 15,
+                "category": "nutrition"
+            }
+        ]
+    },
+    {
+        "conditions": {
+            "any": [
+                {
+                    "field": "energy_level",
+                    "operator": "<",
+                    "value": 5
+                },
+                {
+                    "field": "mood",
+                    "operator": "==",
+                    "value": "tired"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "6:30 AM",
+                "activity": "Gentle yoga to restore energy",
+                "duration": 20,
+                "category": "physical"
+            },
+            {
+                "time": "11:00 AM",
+                "activity": "Short nap or meditation break",
+                "duration": 20,
+                "category": "mental"
+            }
+        ]
+    },
+    {
+        "conditions": {
+            "any": [
+                {
+                    "field": "steps",
+                    "operator": "<",
+                    "value": 4000
+                },
+                {
+                    "field": "weather",
+                    "operator": "!=",
+                    "value": "rainy"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "4:30 PM",
+                "activity": "Light walk outside to increase steps",
+                "duration": 30,
+                "category": "physical"
+            },
+            {
+                "time": "5:00 PM",
+                "activity": "Reflective journaling after walk",
+                "duration": 15,
+                "category": "mental"
+            }
+        ]
+    },
+    {
+        "conditions": {
+            "all": [
+                {
+                    "field": "mood",
+                    "operator": "==",
+                    "value": "anxious"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "5:30 PM",
+                "activity": "15 min grounding meditation",
+                "duration": 15,
+                "category": "mental"
+            },
+            {
+                "time": "9:00 PM",
+                "activity": "Listen to calming bhajan before bed",
+                "duration": 20,
+                "category": "spiritual"
+            }
+        ]
+    },
+    {
+        "conditions": {
+            "all": [
+                {
+                    "field": "sleep_hours",
+                    "operator": ">",
+                    "value": 7
+                },
+                {
+                    "field": "energy_level",
+                    "operator": ">",
+                    "value": 6
+                },
+                {
+                    "field": "mood",
+                    "operator": "==",
+                    "value": "focused"
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "9:00 AM",
+                "activity": "2-hour focused work block",
+                "duration": 120,
+                "category": "cognitive"
+            },
+            {
+                "time": "2:00 PM",
+                "activity": "90 min deep work session",
+                "duration": 90,
+                "category": "cognitive"
+            }
+        ]
+    },
+    {
+        "conditions": {
+            "all": [
+                {
+                    "field": "digestive_issue",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        },
+        "actions": [
+            {
+                "time": "8:00 AM",
+                "activity": "Light satvik breakfast with warm water",
+                "duration": 20,
+                "category": "nutrition"
+            },
+            {
+                "time": "12:00 PM",
+                "activity": "Avoid cold food, prefer khichdi or boiled veggies",
+                "duration": 30,
+                "category": "nutrition"
+            }
+        ]
+    }
+]
