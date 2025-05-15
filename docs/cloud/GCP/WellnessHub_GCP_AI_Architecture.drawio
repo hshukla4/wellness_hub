@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net">
+  <diagram name="WellnessHub GCP AI Stack">&lt;mxGraphModel dx=&quot;1032&quot; dy=&quot;636&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot;&gt;
+  &lt;root&gt;
+    &lt;mxCell id=&quot;0&quot;/&gt;
+    &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot;/&gt;
+
+    &lt;mxCell id=&quot;2&quot; value=&quot;User Device (Mobile/Web)&quot; style=&quot;shape=ellipse;fillColor=#D5E8D4;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;60&quot; y=&quot;100&quot; width=&quot;160&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;3&quot; value=&quot;API Gateway (Cloud Endpoints)&quot; style=&quot;shape=rectangle;fillColor=#FFF2CC;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;270&quot; y=&quot;100&quot; width=&quot;180&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;4&quot; value=&quot;App Engine / Cloud Run&quot; style=&quot;shape=rectangle;fillColor=#DAE8FC;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;270&quot; y=&quot;200&quot; width=&quot;180&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;5&quot; value=&quot;Vertex AI (Model Training &amp; Serving)&quot; style=&quot;shape=rectangle;fillColor=#E1D5E7;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;270&quot; y=&quot;300&quot; width=&quot;220&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;6&quot; value=&quot;BigQuery (Analytics)&quot; style=&quot;shape=rectangle;fillColor=#F8CECC;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;270&quot; y=&quot;400&quot; width=&quot;180&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;7&quot; value=&quot;Cloud Storage (Media/JSON)&quot; style=&quot;shape=rectangle;fillColor=#FFE6CC;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;60&quot; y=&quot;300&quot; width=&quot;180&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;8&quot; value=&quot;Firestore / Datastore&quot; style=&quot;shape=rectangle;fillColor=#F5F5F5;fontSize=12;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;
+      &lt;mxGeometry x=&quot;60&quot; y=&quot;400&quot; width=&quot;180&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;9&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;2&quot; target=&quot;3&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;10&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;3&quot; target=&quot;4&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;11&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;4&quot; target=&quot;5&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;12&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;5&quot; target=&quot;6&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;13&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;4&quot; target=&quot;7&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+
+    &lt;mxCell id=&quot;14&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;&quot; edge=&quot;1&quot; parent=&quot;1&quot; source=&quot;4&quot; target=&quot;8&quot;&gt;
+      &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;
+    &lt;/mxCell&gt;
+  &lt;/root&gt;
+&lt;/mxGraphModel&gt;</diagram>
+</mxfile>

@@ -55,3 +55,6 @@ __pycache__/
 !.docs/
 !.data/
 .DS_Store
+
+# Ignore private key directory
+.gcp_keys
