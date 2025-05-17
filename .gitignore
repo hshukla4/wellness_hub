@@ -9,6 +9,7 @@ venv/
 wellness_hub/
 .env/
 lib/
+/flutter/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
